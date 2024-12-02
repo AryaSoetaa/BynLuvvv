@@ -57,28 +57,7 @@ class RoleController extends Controller
         return view('admin.roles.edit', compact('role', 'permissions'));
     }
 
-    // Update the specified role in storage
-    // public function update(Request $request, Role $role)
-    // {
-    //     // Validate incoming request
-    //     $request->validate([
-    //         'name' => 'required|string|max:255|unique:roles,name,' . $role->id,
-    //         'permissions' => 'nullable|array',
-    //         'permissions.*' => 'exists:permissions,id', // Validate permission IDs
-    //     ]);
-
-    //     // Update the role
-    //     $role->update(['name' => $request->name]);
-
-    //     // Sync permissions for the role
-    //     if ($request->has('permissions')) {
-    //         $role->syncPermissions($request->permissions);
-    //     } else {
-    //         $role->syncPermissions([]);
-    //     }
-
-    //     return redirect()->route('admin.roles.index')->with('success', 'Role updated successfully.');
-    // }
+    
     public function update(Request $request, Role $role)
     {
         // Validate incoming request
